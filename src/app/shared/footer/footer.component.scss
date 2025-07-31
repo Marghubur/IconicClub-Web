@@ -1,0 +1,47 @@
+.custom-footer {
+  background-color: #4b5894;
+  font-size: 14px;
+
+  .logo {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .lang-btn {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 5px 12px;
+    font-size: 13px;
+    cursor: pointer;
+
+    &.active {
+      background: #fff;
+      color: #4b5894;
+    }
+
+    &:hover {
+      background-color: #ffffff;
+      color: #4b5894;
+    }
+  }
+}
+
+.icons-box {
+    background-color: white;
+    color: #4b5894;
+    width: 1.8rem;
+    padding: 0.3rem;
+    font-size: 0.9vw;
+    height: 1.8rem;
+}

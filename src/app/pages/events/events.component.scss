@@ -1,0 +1,32 @@
+.upcoming-event {
+    background: #4c5c96;
+    height: 45vh;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 20px 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.story-title {
+    font-size: 3.2vw;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.separator {
+    height: 4px;
+    background-color: black;
+}
