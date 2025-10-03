@@ -4,3 +4,7 @@ export const Mission = "our-mission";
 export const PartnerWithUs = "parter-with-us";
 export const Events = "events";
 export const Login = "login";
+export const Imprint = "imprint";
+export const PrivacyPolicy = "privacypolicy";
+export const TermAndCondition = "termandcondition";
+export const TermAndUse = "termanduse";
