@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { AboutUs, Events, Home, Imprint, Login, Mission, PartnerWithUs, PrivacyPolicy, TermAndCondition, TermAndUse } from './services/constant';
+import { AboutUs, ContactUs, Events, Home, Imprint, Login, Mission, PartnerWithUs, PrivacyPolicy, TermAndCondition, TermAndUse } from './services/constant';
 
 export const routes: Routes = [
     { path: '', loadComponent: () => import('./pages/home/home.component').then((c) => c.HomeComponent)},
@@ -13,5 +13,6 @@ export const routes: Routes = [
     { path: PrivacyPolicy, loadComponent: () => import('./shared/privacy-policy/privacy-policy.component').then((c) => c.PrivacyPolicyComponent)},
     { path: TermAndCondition, loadComponent: () => import('./shared/term-condition/term-condition.component').then((c) => c.TermConditionComponent)},
     { path: TermAndUse, loadComponent: () => import('./shared/term-use/term-use.component').then((c) => c.TermUseComponent)},
+    { path: ContactUs, loadComponent: () => import('./pages/contact-us/contact-us.component').then((c) => c.ContactUsComponent)},
     { path: '**', loadComponent: () => import('./pages/not-found/not-found.component').then((c) => c.NotFoundComponent)}
 ];

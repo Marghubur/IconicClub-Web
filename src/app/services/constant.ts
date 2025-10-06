@@ -8,3 +8,4 @@ export const Imprint = "imprint";
 export const PrivacyPolicy = "privacypolicy";
 export const TermAndCondition = "termandcondition";
 export const TermAndUse = "termanduse";
+export const ContactUs = "contactus";
