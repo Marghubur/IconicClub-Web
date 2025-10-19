@@ -43,3 +43,8 @@ input:focus {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
+
+.error-field {
+  border: 1px solid red !important;
+  border-right: 4px solid red !important;
+}
