@@ -26,8 +26,15 @@ export class HomeComponent implements AfterViewInit {
       id: 1,
       title: 'Second Slide',
       description: 'This is the second slide description.',
-      image: 'assets/event_9.jpg'
-    }
+      image: 'assets/hero_bg-1.jpeg'
+    },
+    {
+      id: 2,
+      title: 'Second Slide',
+      description: 'This is the second slide description.',
+      image: 'assets/hero_bg_2.jpeg'
+    },
+    
   ];
 
   ngAfterViewInit() {
