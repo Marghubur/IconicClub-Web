@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
 import { AboutUsComponent } from "../about-us/about-us.component";
 import { EventsComponent } from "../events/events.component";
 import { MissionComponent } from "../mission/mission.component";
@@ -14,7 +14,7 @@ declare var bootstrap: any;
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit {
   slides = [
     {
       id: 0,
@@ -36,14 +36,27 @@ export class HomeComponent implements AfterViewInit {
     },
     
   ];
+  MobileView = false;
 
+  ngOnInit() {
+    this.checkScreenSize();
+  }
   ngAfterViewInit() {
     const carouselElement = document.querySelector('#carouselDynamic');
     new bootstrap.Carousel(carouselElement, {
-      interval: 3000, // Autoplay interval in ms
+      interval: 30000000, // Autoplay interval in ms
       ride: 'carousel', // Start cycling automatically
-      pause: 'hover',   // Pause on hover (optional)
+      //pause: 'hover',   // Pause on hover (optional)
       wrap: true        // Loop back to start
     });
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.checkScreenSize();
+  }
+
+  private checkScreenSize() {
+    this.MobileView = window.innerWidth <= 628;
   }
 }

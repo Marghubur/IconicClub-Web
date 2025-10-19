@@ -1,25 +1,31 @@
 <!-- Carousel -->
 <div class="container-fluid px-0">
   <div id="carouselDynamic" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button *ngFor="let slide of slides; index as i"
-              type="button"
-              [attr.data-bs-target]="'#carouselDynamic'"
-              [attr.data-bs-slide-to]="i"
-              [class.active]="i === 0"
-              [attr.aria-current]="i === 0 ? 'true' : null"
-              [attr.aria-label]="'Slide ' + (i + 1)">
-      </button>
-    </div>
+     @if (!MobileView) {
+       <div class="carousel-indicators">
+         <button *ngFor="let slide of slides; index as i"
+                 type="button"
+                 [attr.data-bs-target]="'#carouselDynamic'"
+                 [attr.data-bs-slide-to]="i"
+                 [class.active]="i === 0"
+                 [attr.aria-current]="i === 0 ? 'true' : null"
+                 [attr.aria-label]="'Slide ' + (i + 1)">
+         </button>
+       </div>
+     }
 
     <div class="carousel-inner">
       <div *ngFor="let slide of slides; index as i" class="carousel-item" [class.active]="i === 0">
         <img [src]="slide.image" class="d-block w-100 blur-img" [alt]="slide.title">
         <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center text-white px-2">
           <h1 class="hero-title fst-italic fs-1 fs-md-1">The Iconic Connect</h1>
-          <h5 class="my-2 fw-bold fs-3 fs-md-4">The World's Premier Iconic Leadership Community, where people and business thrive together.</h5>
+          @if (!MobileView) {
+            <h5 class="my-2 fw-bold fs-3 fs-md-4">The World's Premier Iconic Leadership Community, where people and business thrive together.</h5>
+          }
           <h6 class="fs-6 fs-md-5">Connect | Insights | Experience</h6>
-          <button class="btn btn-light mt-3 px-3 px-md-4 py-2 fw-semibold rounded-0" [routerLink]="['/routePath']">BECOME A MEMBER</button>
+          @if (!MobileView) {
+            <button class="btn btn-light mt-3 px-3 px-md-4 py-2 fw-semibold rounded-0" [routerLink]="['/routePath']">BECOME A MEMBER</button>
+          }
         </div>
       </div>
     </div>
