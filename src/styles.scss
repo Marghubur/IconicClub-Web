@@ -48,3 +48,21 @@ input:focus {
   border: 1px solid red !important;
   border-right: 4px solid red !important;
 }
+
+/* Disable text selection */
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Disable image dragging */
+img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+/* Disable right-click on images */
+img {
+  -webkit-touch-callout: none;
+}
